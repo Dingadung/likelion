@@ -42,7 +42,7 @@ public class MemberService {
         return memberRepository.findOne(memberId);
     }
 
-    @Transactional
+    @Transactional // 변경 감지를 사용해서 데이터를 수정
     public void update(Long id, String name) {
         Member member = memberRepository.findOne(id);
         member.setName(name);
