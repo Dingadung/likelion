@@ -30,7 +30,7 @@ public class InitDb {
         initService.dbInit2();
     }
 
-    @Component
+    @Component 
     @Transactional
     @RequiredArgsConstructor
     static class InitService {
