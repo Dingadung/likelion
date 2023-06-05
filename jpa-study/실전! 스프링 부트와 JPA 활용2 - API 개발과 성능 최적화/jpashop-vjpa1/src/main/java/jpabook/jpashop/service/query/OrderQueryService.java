@@ -17,16 +17,16 @@ public class OrderQueryService {
 
     private final OrderRepository orderRepository;
 
-    private List<OrderDto> ordersV3() {
-        List<Order> orders = orderRepository.findAllWithItem();
-
-        for (Order order : orders) {
-            System.out.println("order ref = " + order + "id = " + order.getId());
-        }
-
-        List<OrderApiController.OrderDto> collect = orders.stream()
-                .map(o -> new OrderApiController.OrderDto(o))
-                .collect(Collectors.toList());
-        return collect;
-    }
+//    private List<OrderDto> ordersV3() {
+//        List<Order> orders = orderRepository.findAllWithItem();
+//
+//        for (Order order : orders) {
+//            System.out.println("order ref = " + order + "id = " + order.getId());
+//        }
+//
+//        List<OrderApiController.OrderDto> collect = orders.stream()
+//                .map(o -> new OrderApiController.OrderDto(o))
+//                .collect(Collectors.toList());
+//        return collect;
+//    }
 }
